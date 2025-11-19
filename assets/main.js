@@ -29,7 +29,7 @@ const handleTrash = (event) => {
     console.log("borrando entradas")
     qrCodeShow.innerHTML = "";
     inputValue.value = "";
-    qrCodeContent.style.display = "none";
+    //qrCodeContent.style.display = "none";
 }
 
 const handleDownload = (event) => {
