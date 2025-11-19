@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/main.css">
+  <!--  -->
+  
+  <title>QR code component and create</title>
+
+</head>
+
+<body>
+  <main class="main-container">
+
+    <article class="article-container">
+
+      <div class="article-content">
+        <img src="./images/image-qr-code.png" alt="png qr code" class="article-qr">
+        <p class="article-text-bold">Improve your front-end skills by building projects</p>
+        <p class="article-text-normal">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+        <a href="#second-content" class="article-button">Generate QR</a>
+      </div>
+
+    </article>
+
+    <article class="article-container" id="second-content">
+
+      <form class="article-content form-content">
+        <h2 class="form-title article-text-bold">QR Code Generator</h2>
+        <label class="form-p article-text-normal">Enter your URL to generate your QR code</label>
+        <input type="text" class="form-input" id="form-input">
+        <button type="submit" class="form-button article-button" onclick="handleClick()">Generate QR code</button>
+        <button class="article-button trash-button" onclick="handleTrash()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);"><path d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"></path><path d="M9 10h2v8H9zm4 0h2v8h-2z"></path></svg></button>
+      </form>
+      <div class="qr-code-content" id="qr-code-content">
+        <div class="qr-code-generated" id="qr-code-generated">
+        </div>
+        <button onclick="handleDownload()" class="article-button download-button">Download</button>
+      </div>
+        
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/EdgarAleG/qr-generator">Edgar G</a>.
+    </div>
+  </footer>
+
+  <script src="./assets/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

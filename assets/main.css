@@ -1,0 +1,121 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+    --font-size-p: 15px;
+    --qr-color: #2c7cfb;
+    --font-family: "Outfit", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--slate-300);
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+
+.article-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    /* ---------------------- */
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    width: 300px;
+    padding: .9em;
+    border-radius: .8em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 14px 14px 7px -13px var(--slate-500);
+}
+
+.article-qr {
+    border-radius: .9em;
+}
+
+.article-text-bold {
+    font-weight: 700;
+    color: var(--slate-700);
+}
+
+.article-text-normal {
+    font-weight: 400;
+    color: var(--slate-500);
+}
+
+.article-button {
+    background-color: var(--qr-color);
+    padding: .5em;
+    border-radius: .8em;
+    font-family: var(--font-family);
+    color: var(--white);
+    font-size: 1em;
+    width: 60%;
+    margin: 0 auto;
+    border: none;
+    transition-duration: .2s;
+}
+.article-button:hover {
+    cursor: pointer;
+    box-shadow: 14px 14px 9px -15px var(--slate-500);
+    transform: scale(1.02);
+
+}
+.trash-button {
+    padding: .2em;
+    margin: .5em auto 0 auto;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: var(--white);
+}
+
+.form-input {
+    margin: 1em 0;
+    font-size: 1em;
+    font-family: var(--font-family);
+    padding: .3em;
+    border: thin solid var(--slate-900);
+    border-radius: .8em;
+}
+.form-input:focus {
+    outline: none;
+    border: medium solid var(--qr-color);
+}
+
+.qr-code-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.qr-code-generated {
+    margin-top: .9em;
+    border-radius: .8em;
+    border: 25px solid var(--qr-color);
+}
+
+.download-button {
+    margin-top: 15px;
+}
+
+.attribution {
+    text-align: center;
+}
