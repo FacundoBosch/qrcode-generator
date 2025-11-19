@@ -17,11 +17,11 @@ const handleClick = (event) => {
 	    width: 200,
 	    height: 200,
 	    colorDark : "#fff",
-	    colorLight : "#2c7cfb",
+	    colorLight : "#000000",
 	    correctLevel : QRCode.CorrectLevel.H
 	});
-    qrCodeContent.style.display = "flex";
 
+    qrCodeContent.style.display = "flex";
     console.log(qrCode)
 }
 
@@ -29,7 +29,7 @@ const handleTrash = (event) => {
     console.log("borrando entradas")
     qrCodeShow.innerHTML = "";
     inputValue.value = "";
-    //qrCodeContent.style.display = "none";
+    qrCodeContent.style.display = "none";
 }
 
 const handleDownload = (event) => {
