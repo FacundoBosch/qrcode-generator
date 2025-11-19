@@ -11,52 +11,35 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/main.css">
   <!--  -->
-  
-  <title>QR code component and create</title>
-
+  <title>Generador QR</title>
 </head>
 
 <body>
   <main class="main-container">
-
-    <article class="article-container">
-
-      <div class="article-content">
-        <img src="./images/image-qr-code.png" alt="png qr code" class="article-qr">
-        <p class="article-text-bold">Improve your front-end skills by building projects</p>
-        <p class="article-text-normal">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-        <a href="#second-content" class="article-button">Generate QR</a>
-      </div>
-
-    </article>
-
-    <article class="article-container" id="second-content">
-
-      <form class="article-content form-content">
-        <h2 class="form-title article-text-bold">QR Code Generator</h2>
-        <label class="form-p article-text-normal">Enter your URL to generate your QR code</label>
-        <input type="text" class="form-input" id="form-input">
-        <button type="button" class="form-button article-button" onclick="handleClick()">Generate QR code</button>
-        <button class="article-button trash-button" onclick="handleTrash()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);"><path d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"></path><path d="M9 10h2v8H9zm4 0h2v8h-2z"></path></svg></button>
-      </form>
-      <div class="qr-code-content" id="qr-code-content">
-        <div class="qr-code-generated" id="qr-code-generated">
+    <div class="main-page">
+      <div class="fst-half">
+        <div class="superior"><h4 class="main-title">Generador de QR</h4></div>
+        <div class="inferior">
+          <input type="text" class="form-input1" id="form-input">
+          <button type="button" class="form-button1" onclick="handleClick()">➤</button>
         </div>
-        <button onclick="handleDownload()" class="article-button download-button">Download</button>
       </div>
-        
-
-    </article>
-
-  </main>
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/EdgarAleG/qr-generator">Edgar G</a>.
+      <div class="snd-half">
+        <div class="qr-code-content" id="qr-code-content">
+          <div class="qr-code-generated" id="qr-code-generated"></div>
+          <button onclick="handleDownload()" class="article-button download-button">Descargar</button>
+          <button onclick="handleTrash()" class="article-button trash-button"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+        </div>
+      </div>
     </div>
-  </footer>
-
+    <div class="footer">
+      <div class="attribution">
+        Librería hecha por <a href="https://github.com/davidshimjs" target="_blank">davidshimjs</a>. 
+        Codificado por <a href="https://github.com/EdgarAleG/qr-generator" target="_blank">Edgar G</a>.
+        Nuevo Front-End por <a href="https://github.com/FacundoBosch" target="_blank">BOSCH Facundo</a>.
+      </div>
+    </div>
+  </main>
   <script src="./assets/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>

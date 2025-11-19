@@ -1,8 +1,10 @@
 :root {
     --white: hsl(0, 0%, 100%);
-    --slate-300: hsl(212, 45%, 89%);
+    --slate-300: #d6e2f0;
     --slate-500: hsl(216, 15%, 48%);
     --slate-900: hsl(218, 44%, 22%);
+    --verde: #29BF12;
+    --shadow: #065143;
     --font-size-p: 15px;
     --qr-color: #2c7cfb;
     --font-family: "Outfit", sans-serif;
@@ -21,84 +23,92 @@ html {
     scroll-behavior: smooth;
 }
 
-.article-container {
+.main-container {
+    display: grid;
+    grid-template-rows: 0.95fr 0.05fr;
+    height: 97vh;
+    width: 100%;
+}
+
+@media(max-width: 850px){
+    .main-container{
+        height: 150vh;
+    }
+    .main-page{
+        grid-template-rows: 0.6fr 0.4fr;
+    }
+}
+
+.main-page {
+    display: grid;
+    grid-template-columns: 0.70fr 0.3fr;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.fst-half {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    padding: 5%;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.main-title {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-size: 7em;
+    color: var(--verde);
+}
+
+.inferior {
+    display: grid;
+    grid-template-columns: 0.70fr 0.3fr;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.form-input1 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-family: var(--font-family);
+    padding: .3em;
+    border: thin solid var(--slate-900);
+    border-radius: .3em;
+}
+
+.form-input1:focus {
+    outline: none;
+    border: medium solid var(--verde);
+}
+
+.form-button1{
+    margin: .3em;
+    background-color: var(--verde);
+    padding: .5em;
+    border-radius: .3em;
+    font-family: var(--font-family);
+    color: var(--white);
+    font-size: 2em;
+    width: 80%;
+    border: none;
+    transition-duration: .2s;
+}
+
+.form-button1:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.snd-half {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    /* ---------------------- */
-}
-
-.article-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--white);
-    width: 300px;
-    padding: .9em;
-    border-radius: .8em;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 14px 14px 7px -13px var(--slate-500);
-}
-
-.article-qr {
-    border-radius: .9em;
-}
-
-.article-text-bold {
-    font-weight: 700;
-    color: var(--slate-700);
-}
-
-.article-text-normal {
-    font-weight: 400;
-    color: var(--slate-500);
-}
-
-.article-button {
-    background-color: var(--qr-color);
-    padding: .5em;
-    border-radius: .8em;
-    font-family: var(--font-family);
-    color: var(--white);
-    font-size: 1em;
-    width: 60%;
-    margin: 0 auto;
-    border: none;
-    transition-duration: .2s;
-}
-.article-button:hover {
-    cursor: pointer;
-    box-shadow: 14px 14px 9px -15px var(--slate-500);
-    transform: scale(1.02);
-
-}
-.trash-button {
-    padding: .2em;
-    margin: .5em auto 0 auto;
-    color: #fff;
-}
-a {
-    text-decoration: none;
-}
-a:visited {
-    color: var(--white);
-}
-
-.form-input {
-    margin: 1em 0;
-    font-size: 1em;
-    font-family: var(--font-family);
-    padding: .3em;
-    border: thin solid var(--slate-900);
-    border-radius: .8em;
-}
-.form-input:focus {
-    outline: none;
-    border: medium solid var(--qr-color);
+    height: 100%;
 }
 
 .qr-code-content {
@@ -109,11 +119,43 @@ a:visited {
 .qr-code-generated {
     margin-top: .9em;
     border-radius: .8em;
-    border: 25px solid var(--qr-color);
+    border: 25px solid var(--verde);
 }
 
 .download-button {
-    margin-top: 15px;
+    margin: .3em;
+    margin-top: 1em;
+    background-color: var(--verde);
+    padding: .5em;
+    border-radius: .3em;
+    font-family: var(--font-family);
+    color: var(--white);
+    font-size: 1.2em;
+    border: none;
+    transition-duration: .2s;
+}
+
+.download-button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.trash-button {
+    margin: .3em;
+    margin-top: 0em;
+    background-color: var(--verde);
+    padding: .5em;
+    border-radius: .3em;
+    font-family: var(--font-family);
+    color: var(--white);
+    font-size: 1.2em;
+    border: none;
+    transition-duration: .2s;
+}
+
+.trash-button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
 }
 
 .attribution {
