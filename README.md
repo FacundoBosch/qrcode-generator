@@ -1,10 +1,7 @@
 # Frontend Mentor - QR code component solution
 
 ## Overview
-I created a qr component, but also a qr generator, with download button and some other functinality.
-Probably I'll adding more features on the future...
-
-It was building with sample html, css and Javascript.
+cosas de qr que no entiendo todavia, te juro que voy a cambiarle cosas edgar entonces no es tan descarado el robo gracias
 
 ### Screenshot
 
