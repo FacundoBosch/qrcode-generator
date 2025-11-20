@@ -1,12 +1,24 @@
-# Frontend Mentor - QR code component solution
+# Generador de códigos QR
 
 ## Overview
-cosas de qr que no entiendo todavia, te juro que voy a cambiarle cosas edgar entonces no es tan descarado el robo gracias
+
+Consiste en una página web, completamente de Front-End, que permite generar QR's de manera sencilla. 
+Pon el link, presiona el botón y listo.
+
+This is a website fully coded in Front-End, allows you to generate QR codes easily.
+Input URL, press the button and you are done.
 
 ### Screenshot
 
-<img src="./images/Page-qr-one.png" width="400px" alt="first image of the page">
+<img src="./images/main-desktop.png" width="400px" alt="Image description of desktop website">
 
-<img src="./images/Page-qr-two.png" width="400px" alt="second image of the page">
+<img src="./images/main-phone.png" width="400px" alt="Image description of mobile website">
 
 ### Links
+
+Librería de JavaScript creada por: davidshimjs
+    https://github.com/davidshimjs
+Código original de la página web por: Edgar G
+    https://github.com/EdgarAleG/qr-generator
+Nueva adaptación de Front-End por: BOSCH Facundo
+    https://github.com/FacundoBosch/qrcode-generator
